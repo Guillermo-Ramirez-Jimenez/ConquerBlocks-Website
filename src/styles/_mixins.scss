@@ -1,0 +1,52 @@
+@use '_colors' as c;
+
+@mixin button {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding: 10px;
+    background-color: c.$gray;
+    border: 1px solid white;
+    border-radius: 5px;
+    transform: skew(-20deg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+    span {
+        display: block;
+        transform: skew(20deg);
+        text-align: center;
+    }
+    &:hover {
+        background-color: c.$green;
+        border-color: c.$gray;
+        span {
+            color: c.$gray;
+        }
+    }
+}
+
+@mixin title {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 5px;
+    transform: skew(-20deg);
+    background-color: c.$blue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    span {
+        color: c.$black;
+        display: block;
+        transform: skew(20deg);
+        text-align: center;
+    }
+}
+
+@mixin box {
+    @include title;
+    background-color: c.$gray;
+    padding: 20px;
+    span {
+        color: white;
+    }
+}

@@ -1,0 +1,1 @@
+import "./styles/aviso_legal.scss";

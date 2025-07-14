@@ -1,0 +1,120 @@
+@use '_colors' as c;
+@use '_fonts' as f;
+@use '_responsive' as r;
+@use '_mixins' as m;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Quantico', Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: c.$green;
+}
+
+ul {
+    list-style: none;
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    background-color: c.$black;
+}
+
+header {
+    padding: 20px;
+    @include r.breakpoint(desktop) {
+        display: flex;
+        align-items: center;
+        padding: 40px 100px;
+    }
+    .logo {
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+        @include r.breakpoint(desktop) {
+            padding: 0;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    nav {
+        position: relative;
+        display: block;
+        @include r.breakpoint(desktop) {
+            margin-left: auto;
+        }
+        .menu_button {
+            @include m.button;
+            @include r.breakpoint(desktop) {
+                display: none;
+            }
+        }
+        #dropdown_menu {
+            display: none;
+        }
+        #dropdown_menu:checked ~ ul {
+            display: block;
+        }
+        #dropdown_menu:checked ~ .menu_button {
+            background-color: c.$green;
+            border-color: c.$gray;
+            span {
+                color: c.$gray;
+            }
+        }
+        ul {
+            display: none;
+            @include r.breakpoint(desktop) {
+                display: flex;
+                gap: 5px;
+            }
+            a {
+                @include m.button;
+            }
+        }
+    }
+}
+
+main {
+    .title {
+        @include m.title;
+        @include r.breakpoint(desktop) {
+            margin: 0 100px;
+        }
+    }
+    .login {
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: fit-content;
+        @include r.breakpoint(desktop) {
+            padding: 40px;
+        }
+        fieldset {
+            padding: 20px;
+            border-radius: 10px;
+            * {
+                display: block;
+            }
+            input {
+                color: c.$black;
+            }
+            button {
+                display: inline-block;
+                margin-right: 20px;
+                padding: 5px;
+                color: c.$black;
+            }
+            label + input {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
