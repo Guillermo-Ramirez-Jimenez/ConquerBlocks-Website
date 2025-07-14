@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+  <script type="module" crossorigin src="/ConquerBlocks-Website/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+  <link rel="stylesheet" crossorigin href="/ConquerBlocks-Website/assets/registro-QWaeHWd6.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="/ConquerBlocks-Website/assets/logo-BrffDbrs.svg" alt="logo"></a>
+        <nav class="dropdown_menu">
+            <input type="checkbox" id="dropdown_menu" name="dropdown_menu" value="">
+            <label for="dropdown_menu" class="menu_button"><span>Menú</span></label>
+            <ul>
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="quienes_somos.html"><span>Quiénes somos</span></a></li>
+                <li><a href="cursos.html"><span>Cursos</span></a></li>
+                <li><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="registro.html"><span>Registro</span></a></li>
+                <li><a href="login.html"><span>Login</span></a></li>
+                <li><a href="contacto.html"><span>Contacto</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title"><span>Formulario de registro</span></h1>
+        <form action="" method="post" enctype="multipart/form-data" class="registro">
+            <fieldset>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+                <label for="web">Página web:</label>
+                <input type="url" id="web" name="web">
+                <label for="foto">Foto:</label>
+                <input type="file" name="foto" id="foto" accept=".jpg,.jpeg,.bmp">
+                <label for="biografia">Biografía:</label>
+                <textarea name="biografia" id="biografia"></textarea>
+                <button type="submit">Enviar</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>Propiedad de ConquerBlocks&reg;, todos los derechos reservados.</p>
+        <a href="aviso_legal.html">Aviso legal</a>
+    </footer>
+</body>
+
+</html>
